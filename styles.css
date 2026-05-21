@@ -472,6 +472,81 @@ a:hover { color: var(--accent-2); }
   .pub { grid-template-columns: 1fr; gap: 0.5rem; }
 }
 
+/* -------- Media coverage -------- */
+.media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+.media-item {
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  padding: 1.6rem 1.65rem 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s, box-shadow .3s;
+}
+.media-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -18px rgba(26, 27, 38, 0.18);
+}
+.media-year {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+.media-body { display: flex; flex-direction: column; flex: 1; }
+.media-item h3 {
+  font-family: var(--display);
+  font-weight: 450;
+  font-size: 1.12rem;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.005em;
+}
+.media-outlet {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin: 0 0 0.55rem 0;
+  font-weight: 500;
+}
+.media-outlet em {
+  font-style: italic;
+  color: var(--muted);
+  font-weight: 400;
+}
+.media-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 0.9rem 0;
+  line-height: 1.5;
+  flex: 1;
+}
+.media-link {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  align-self: flex-start;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  margin-top: auto;
+}
+.media-link:hover { color: var(--accent-2); border-bottom-color: var(--accent-2); }
+
+@media (max-width: 740px) {
+  .media-list { grid-template-columns: 1fr; }
+}
+
 /* -------- Teaching -------- */
 .teaching-philosophy {
   font-family: var(--display);
